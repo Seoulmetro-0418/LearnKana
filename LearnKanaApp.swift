@@ -1,10 +1,3 @@
-//
-//  LearnKanaApp.swift
-//  LearnKana
-//
-//  Created by Hyunjun Kim on 3/22/25.
-//
-
 import SwiftUI
 
 @main
