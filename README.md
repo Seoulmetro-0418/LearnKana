@@ -12,7 +12,8 @@
 
 ## Purpose
 
-	LearnKana is designed to be a learning tool that makes learning Hiragana and Katakana, the first step in learning Japanese, easy and fun.
+	LearnKana is designed to be a learning tool that makes learning Kana(Hiragana and Katakana),
+ 	the first step in learning Japanese, easy and fun.
  	It combines visual repetition learning and quizzes to help you become familiar with the Kana characters.
 
 ## Roadmap
