@@ -1,4 +1,5 @@
 # LearnKana 🇯🇵📚
+About LearnKana
 
 	LearnKana is a simple and effective app for mastering Hiragana and Katakana, the two basic Japanese scripts.
 	Instead of multiple-choice quizzes, users type the pronunciation in Korean based on the displayed character
