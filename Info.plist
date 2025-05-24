@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>일본어 학습 알림 발송을 위해 알림 권한 허용이 필요합니다.  For receive the alarms, you need to allow Notifications.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GmarketSansTTFMedium.ttf</string>
+	</array>
+</dict>
+</plist>

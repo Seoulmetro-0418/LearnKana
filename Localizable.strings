@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  LearnKana
+
+  Created by Hyunjun Kim on 4/16/25.
+  
+*/
+
+"quizTitle" = "일본어 퀴즈";
+"quizMode" = "퀴즈 모드";
+"answerPlaceholder" = "정답을 입력하세요(받침 포함)";
+"submitButton" = "제출";
+"nextQuestionButton" = "다음 문제";
+"correctMessage" = "정답입니다!";
+"incorrectMessage" = "오답입니다. 정답: ";
+"todayRecord" = "오늘 기록";
+"questionsSolved" = "오늘 푼 문제: ";
+"correctAnswers" = "오늘 맞은 문제: ";
+"incorrectAnswers" = "오늘 틀린 문제: ";
