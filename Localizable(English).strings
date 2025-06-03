@@ -5,11 +5,11 @@
 
 "quizTitle" = "Japanese Quiz";
 "quizMode" = "Quiz Mode";
-"answerPlaceholder" = "Enter your answer (including batchim)";
+"answerPlaceholder" = "Answer based on Roman input";
 "submitButton" = "Submit";
 "nextQuestionButton" = "Next Question";
 "correctMessage" = "Correct!";
-"incorrectMessage" = "Incorrect. The correct answer is: ";
+"incorrectMessage" = "Incorrect. The correct answer is: %@";
 "todayRecord" = "Today's Record";
 "questionsSolved" = "Questions Solved Today: ";
 "correctAnswers" = "Correct Answers Today: ";
