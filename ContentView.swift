@@ -8,76 +8,76 @@ extension Font {
 }
 
 struct ContentView: View {
-    let hiragana: [String: String] = [
-        "あ": "아", "い": "이", "う": "우", "え": "에", "お": "오",
-        "か": "카", "き": "키", "く": "쿠", "け": "케", "こ": "코",
-        "さ": "사", "し": "시", "す": "스", "せ": "세", "そ": "소",
-        "た": "타", "ち": "치", "つ": "츠", "て": "테", "と": "토",
-        "な": "나", "に": "니", "ぬ": "누", "ね": "네", "の": "노",
-        "は": "하", "ひ": "히", "ふ": "후", "へ": "헤", "ほ": "호",
-        "ま": "마", "み": "미", "む": "무", "め": "메", "も": "모",
-        "や": "야", "ゆ": "유", "よ": "요",
-        "ら": "라", "り": "리", "る": "루", "れ": "레", "ろ": "로",
-        "わ": "와", "を": "오", "ん": "받침",
-        "が": "가", "ぎ": "기", "ぐ": "구", "げ": "게", "ご": "고",
-        "ざ": "자", "じ": "지", "ず": "즈", "ぜ": "제", "ぞ": "조",
-        "だ": "다", "ぢ": "지", "づ": "즈", "で": "데", "ど": "도",
-        "ば": "바", "び": "비", "ぶ": "부", "べ": "베", "ぼ": "보",
-        "ぱ": "파", "ぴ": "피", "ぷ": "푸", "ぺ": "페", "ぽ": "포",
-        "きゃ": "캬", "きゅ": "큐", "きょ": "쿄",
-        "しゃ": "샤", "しゅ": "슈", "しょ": "쇼",
-        "ちゃ": "챠", "ちゅ": "츄", "ちょ": "쵸",
-        "にゃ": "냐", "にゅ": "뉴", "にょ": "뇨",
-        "ひゃ": "햐", "ひゅ": "휴", "ひょ": "효",
-        "みゃ": "먀", "みゅ": "뮤", "みょ": "묘",
-        "りゃ": "랴", "りゅ": "류", "りょ": "료",
-        "ぎゃ": "갸", "ぎゅ": "규", "ぎょ": "교",
-        "じゃ": "쟈", "じゅ": "쥬", "じょ": "죠",
-        "びゃ": "뱌", "びゅ": "뷰", "びょ": "뵤",
-        "ぴゃ": "퍄", "ぴゅ": "퓨", "ぴょ": "표"
+    let hiragana: [String: [String]] = [
+        "あ": ["a", "아"], "い": ["i", "이"], "う": ["u", "우"], "え": ["e", "에"], "お": ["o", "오"],
+        "か": ["ka", "카"], "き": ["ki", "키"], "く": ["ku", "쿠"], "け": ["ke", "케"], "こ": ["ko", "코"],
+        "さ": ["sa", "사"], "し": ["shi", "시"], "す": ["su", "스"], "せ": ["se", "세"], "そ": ["so", "소"],
+        "た": ["ta", "타"], "ち": ["chi", "치"], "つ": ["tsu", "츠"], "て": ["te", "테"], "と": ["to", "토"],
+        "な": ["na", "나"], "に": ["ni", "니"], "ぬ": ["nu", "누"], "ね": ["ne", "네"], "の": ["no", "노"],
+        "は": ["ha", "하"], "ひ": ["hi", "히"], "ふ": ["hu", "후", "fu"], "へ": ["he", "헤"], "ほ": ["ho", "호"],
+        "ま": ["ma", "마"], "み": ["mi", "미"], "む": ["mu", "무"], "め": ["me", "메"], "も": ["mo", "모"],
+        "や": ["ya", "야"], "ゆ": ["yu", "유"], "よ": ["yo", "요"],
+        "ら": ["ra", "라"], "り": ["ri", "리"], "る": ["ru", "루"], "れ": ["re", "레"], "ろ": ["ro", "로"],
+        "わ": ["wa", "와"], "を": ["wo", "오"], "ん": ["nn", "받침", "n", "ㄴ", "n", "ㅇ", "n", "ㅁ"],
+        "が": ["ga", "가"], "ぎ": ["gi", "기"], "ぐ": ["gu", "구"], "げ": ["ge", "게"], "ご": ["go", "고"],
+        "ざ": ["za", "자"], "じ": ["ji", "지"], "ず": ["zu", "즈"], "ぜ": ["ze", "제"], "ぞ": ["zo", "조"],
+        "だ": ["da", "다"], "ぢ": ["ji", "지"], "づ": ["zu", "즈"], "で": ["de", "데"], "ど": ["do", "도"],
+        "ば": ["ba", "바"], "び": ["bi", "비"], "ぶ": ["bu", "부"], "べ": ["be", "베"], "ぼ": ["bo", "보"],
+        "ぱ": ["pa", "파"], "ぴ": ["pi", "피"], "ぷ": ["pu", "푸"], "ぺ": ["pe", "페"], "ぽ": ["po", "포"],
+        "きゃ": ["kya", "캬"], "きゅ": ["kyu", "큐"], "きょ": ["kyo", "쿄"],
+        "しゃ": ["sha", "샤"], "しゅ": ["shu", "슈"], "しょ": ["sho", "쇼"],
+        "ちゃ": ["cha", "챠"], "ちゅ": ["chu", "츄"], "ちょ": ["cho", "쵸"],
+        "にゃ": ["nya", "냐"], "にゅ": ["nyu", "뉴"], "にょ": ["nyo", "뇨"],
+        "ひゃ": ["hya", "햐"], "ひゅ": ["hyu", "휴"], "ひょ": ["hyo", "효"],
+        "みゃ": ["mya", "먀"], "みゅ": ["myu", "뮤"], "みょ": ["myo", "묘"],
+        "りゃ": ["rya", "랴"], "りゅ": ["ryu", "류"], "りょ": ["ryo", "료"],
+        "ぎゃ": ["gya", "갸"], "ぎゅ": ["gyu", "규"], "ぎょ": ["gyo", "교"],
+        "じゃ": ["ja", "쟈"], "じゅ": ["ju", "쥬"], "じょ": ["jo", "죠"],
+        "びゃ": ["bya", "뱌"], "びゅ": ["byu", "뷰"], "びょ": ["byo", "뵤"],
+        "ぴゃ": ["pya", "퍄"], "ぴゅ": ["pyu", "퓨"], "ぴょ": ["pyo", "표"]
     ]
     
-    let katakana: [String: String] = [
-        "ア": "아", "イ": "이", "ウ": "우", "エ": "에", "オ": "오",
-        "カ": "카", "キ": "키", "ク": "쿠", "ケ": "케", "コ": "코",
-        "サ": "사", "シ": "시", "ス": "스", "セ": "세", "ソ": "소",
-        "タ": "타", "チ": "치", "ツ": "츠", "テ": "테", "ト": "토",
-        "ナ": "나", "ニ": "니", "ヌ": "누", "ネ": "네", "ノ": "노",
-        "ハ": "하", "ヒ": "히", "フ": "후", "ヘ": "헤", "ホ": "호",
-        "マ": "마", "ミ": "미", "ム": "무", "メ": "메", "モ": "모",
-        "ヤ": "야", "ユ": "유", "ヨ": "요",
-        "ラ": "라", "リ": "리", "ル": "루", "レ": "레", "ロ": "로",
-        "ワ": "와", "ヲ": "오", "ン": "받",
-        "ガ": "가", "ギ": "기", "グ": "구", "ゲ": "게", "ゴ": "고",
-        "ザ": "자", "ジ": "지", "ズ": "즈", "ゼ": "제", "ゾ": "조",
-        "ダ": "다", "ヂ": "지", "ヅ": "즈", "デ": "데", "ド": "도",
-        "バ": "바", "ビ": "비", "ブ": "부", "ベ": "베", "ボ": "보",
-        "パ": "파", "ピ": "피", "プ": "푸", "ペ": "페", "ポ": "포",
-        "キャ": "캬", "キュ": "큐", "キョ": "쿄",
-        "シャ": "샤", "シュ": "슈", "ショ": "쇼",
-        "チャ": "챠", "チュ": "츄", "チョ": "쵸",
-        "ニャ": "냐", "ニュ": "뉴", "ニョ": "뇨",
-        "ヒャ": "햐", "ヒュ": "휴", "ヒョ": "효",
-        "ミャ": "먀", "ミュ": "뮤", "ミョ": "묘",
-        "リャ": "랴", "リュ": "류", "リョ": "료",
-        "ギャ": "갸", "ギュ": "규", "ギョ": "교",
-        "ジャ": "쟈", "ジュ": "쥬", "ジョ": "죠",
-        "ビャ": "뱌", "ビュ": "뷰", "ビョ": "뵤",
-        "ピャ": "퍄", "ピュ": "퓨", "ピョ": "표",
-        "ファ": "화", "フィ": "휘", "フェ": "훼", "フォ": "호", "フュ": "휴",
-        "ティ": "티", "ディ": "디", "トゥ": "투", "ドゥ": "두",
-        "チェ": "체", "ジェ": "제",
-        "シェ": "셰", "スィ": "시", "ズィ": "지",
-        "ツァ": "차", "ツィ": "치", "ツェ": "체", "ツォ": "초",
-        "テュ": "튜", "デュ": "듀",
-        "ウィ": "위", "ウェ": "웨", "ウォ": "워",
-        "ヴァ": "바", "ヴィ": "비", "ヴ": "브", "ヴェ": "베", "ヴォ": "보", "ヴュ": "뷰",
-        "イェ": "예", "キェ": "켸", "ニェ": "녜", "ミェ": "몌", "ヒェ": "혜", "リェ": "례"
+    let katakana: [String: [String]] = [
+        "ア": ["a", "아"], "イ": ["i", "이"], "ウ": ["u", "우"], "エ": ["e", "에"], "オ": ["o", "오"],
+        "カ": ["ka", "카"], "キ": ["ki", "키"], "ク": ["ku", "쿠"], "ケ": ["ke", "케"], "コ": ["ko", "코"],
+        "サ": ["sa", "사"], "シ": ["shi", "시"], "ス": ["su", "스"], "セ": ["se", "세"], "ソ": ["so", "소"],
+        "タ": ["ta", "타"], "チ": ["chi", "치"], "ツ": ["tsu", "츠"], "テ": ["te", "테"], "ト": ["to", "토"],
+        "ナ": ["na", "나"], "ニ": ["ni", "니"], "ヌ": ["nu", "누"], "ネ": ["ne", "네"], "ノ": ["no", "노"],
+        "ハ": ["ha", "하"], "ヒ": ["hi", "히"], "フ": ["hu", "후", "fu"], "ヘ": ["he", "헤"], "ホ": ["ho", "호"],
+        "マ": ["ma", "마"], "ミ": ["mi", "미"], "ム": ["mu", "무"], "メ": ["me", "메"], "モ": ["mo", "모"],
+        "ヤ": ["ya", "야"], "ユ": ["yu", "유"], "ヨ": ["yo", "요"],
+        "ラ": ["ra", "라"], "リ": ["ri", "리"], "ル": ["ru", "루"], "レ": ["re", "레"], "ロ": ["ro", "로"],
+        "ワ": ["wa", "와"], "ヲ": ["wo", "오"], "ン": ["nn", "받침", "n", "ㄴ", "n", "ㅇ", "n", "ㅁ"],
+        "ガ": ["ga", "가"], "ギ": ["gi", "기"], "グ": ["gu", "구"], "ゲ": ["ge", "게"], "ゴ": ["go", "고"],
+        "ザ": ["za", "자"], "ジ": ["ji", "지"], "ズ": ["zu", "즈"], "ゼ": ["ze", "제"], "ゾ": ["zo", "조"],
+        "ダ": ["da", "다"], "ヂ": ["ji", "지"], "ヅ": ["zu", "즈"], "デ": ["de", "데"], "ド": ["do", "도"],
+        "バ": ["ba", "바"], "ビ": ["bi", "비"], "ブ": ["bu", "부"], "ベ": ["be", "베"], "ボ": ["bo", "보"],
+        "パ": ["pa", "파"], "ピ": ["pi", "피"], "プ": ["pu", "푸"], "ペ": ["pe", "페"], "ポ": ["po", "포"],
+        "キャ": ["kya", "캬"], "キュ": ["kyu", "큐"], "キョ": ["kyo", "쿄"],
+        "シャ": ["sha", "샤"], "シュ": ["shu", "슈"], "ショ": ["sho", "쇼"],
+        "チャ": ["cha", "챠"], "チュ": ["chu", "츄"], "チョ": ["cho", "쵸"],
+        "ニャ": ["nya", "냐"], "ニュ": ["nyu", "뉴"], "ニョ": ["nyo", "뇨"],
+        "ヒャ": ["hya", "햐"], "ヒュ": ["hyu", "휴"], "ヒョ": ["hyo", "효"],
+        "ミャ": ["mya", "먀"], "ミュ": ["myu", "뮤"], "ミョ": ["myo", "묘"],
+        "リャ": ["rya", "랴"], "リュ": ["ryu", "류"], "リョ": ["ryo", "료"],
+        "ギャ": ["gya", "갸"], "ギュ": ["gyu", "규"], "ギョ": ["gyo", "교"],
+        "ジャ": ["ja", "쟈"], "ジュ": ["ju", "쥬"], "ジョ": ["jo", "죠"],
+        "ビャ": ["bya", "뱌"], "ビュ": ["byu", "뷰"], "ビョ": ["byo", "뵤"],
+        "ピャ": ["pya", "퍄"], "ピュ": ["pyu", "퓨"], "ピョ": ["pyo", "표"],
+        "ファ": ["fa", "화"], "フィ": ["fi", "휘"], "フェ": ["fe", "훼"], "フォ": ["fo", "호"], "フュ": ["fyu", "휴"],
+        "ティ": ["ti", "티"], "ディ": ["di", "디"], "トゥ": ["tu", "투"], "ドゥ": ["du", "두"],
+        "チェ": ["che", "체"], "ジェ": ["je", "제"],
+        "シェ": ["she", "셰"], "スィ": ["si", "시"], "ズィ": ["zi", "지"],
+        "ツァ": ["tsa", "차"], "ツィ": ["tsi", "치"], "ツェ": ["tse", "체"], "ツォ": ["tso", "초"],
+        "テュ": ["tyu", "튜"], "デュ": ["dyu", "듀"],
+        "ウィ": ["wi", "위"], "ウェ": ["we", "웨"], "ウォ": ["wo", "워"],
+        "ヴァ": ["va", "바"], "ヴィ": ["vi", "비"], "ヴ": ["vu", "브"], "ヴェ": ["ve", "베"], "ヴォ": ["vo", "보"], "ヴュ": ["vyu", "뷰"],
+        "イェ": ["ye", "예"], "キェ": ["kye", "켸"], "ニェ": ["nye", "녜"], "ミェ": ["mye", "몌"], "ヒェ": ["hye", "혜"], "リェ": ["rye", "례"]
     ]
     
     
     @State private var currentCharacter: String = ""
-    @State private var correctAnswer: String = ""
+    @State private var correctAnswer: [String] = []
     @State private var userAnswer: String = ""
     @State private var feedbackMessage: String = ""
     @State private var selectedMode: String = "ひ/カ"
@@ -86,6 +86,8 @@ struct ContentView: View {
     @State private var correctQuestions: Int = 0
     @State private var incorrectQuestions: Int = 0
     @FocusState private var isTextFieldFocused: Bool
+    @State private var correctLocalized: String = NSLocalizedString("correctMessage", comment: "correct message")
+    @State private var incorrectFormatLocalized: String = ""
     
     let modes = ["ひ/カ", "ひらがな", "カタカナ"]
     
@@ -135,7 +137,7 @@ struct ContentView: View {
                 
                 Text(feedbackMessage)
                     .font(.gmarketSans(size: 18))
-                    .foregroundColor(feedbackMessage == NSLocalizedString("correctMessage", comment: "Correct message") ? .green : .red)
+                    .foregroundColor(feedbackMessage == correctLocalized ? .green : .red)
                     .bold()
                     .padding()
                 
@@ -158,6 +160,7 @@ struct ContentView: View {
             loadTodayRecord()
             nextQuestion()
             requestNotificationPermission()
+            incorrectFormatLocalized = NSLocalizedString("incorrectMessage", comment: "incorrect message with answer")
         }
     }
     
@@ -220,12 +223,12 @@ struct ContentView: View {
         let keys = Array(characterSet.keys)
         guard !keys.isEmpty else {
             currentCharacter = ""
-            correctAnswer = ""
+            correctAnswer = []
             return
         }
         if let randomKey = keys.randomElement() {
             currentCharacter = randomKey
-            correctAnswer = characterSet[randomKey] ?? ""
+            correctAnswer = characterSet[randomKey] ?? []
             userAnswer = ""
             feedbackMessage = ""
             isAnswered = false
@@ -233,15 +236,29 @@ struct ContentView: View {
     }
     
     func checkAnswer() {
-        if userAnswer.trimmingCharacters(in: .whitespacesAndNewlines) == correctAnswer {
-            feedbackMessage = "정답입니다!"
+        let trimmed = userAnswer.trimmingCharacters(in: .whitespacesAndNewlines)
+        let languageCode = Locale.current.languageCode ?? "en"
+        // 영어: 0,2,4... / 한국어: 1,3,5...
+        let preferredIndexes: [Int]
+        if languageCode == "ko" {
+            preferredIndexes = stride(from: 1, to: correctAnswer.count, by: 2).map { $0 }
+        } else {
+            preferredIndexes = stride(from: 0, to: correctAnswer.count, by: 2).map { $0 }
+        }
+        let preferredAnswers = preferredIndexes.compactMap { idx in
+            idx < correctAnswer.count ? correctAnswer[idx] : nil
+        }
+        let correctLocalized = NSLocalizedString("correctMessage", comment: "correct message")
+        if preferredAnswers.contains(trimmed) {
+            feedbackMessage = correctLocalized
             correctQuestions += 1
         } else {
-            feedbackMessage = "오답입니다. 정답: \(correctAnswer)"
+            let shownAnswers = Array(Set(preferredAnswers))
+            feedbackMessage = String(format: incorrectFormatLocalized, shownAnswers.joined(separator: ", "))
             incorrectQuestions += 1
         }
         isAnswered = true
-        totalQuestions += 1  // 문제를 푼 후에 문제 수가 증가하도록 수정
+        totalQuestions += 1
         CoreDataHelper.shared.saveQuizRecord(
             total: Int32(totalQuestions),
             correct: Int32(correctQuestions),
