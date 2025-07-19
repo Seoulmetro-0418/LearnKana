@@ -8,6 +8,7 @@
 ---
 
 <a name="korean"></a>
+## 🇰🇷 한국어
 ### LearnKana 소개
 
         LearnKana는 히라가나와 가타카나, 두 가지 기본 일본어 문자 습득을 돕는 간단하면서 효과적인 앱입니다.  
@@ -34,6 +35,7 @@
 ---
 
 <a name="chinese"></a>
+## 🇨🇳 中文
 ### LearnKana 介绍
 
         LearnKana 是一个简单且高效的应用，帮助掌握日语的两种基本文字——平假名和片假名。  
@@ -60,6 +62,7 @@
 ---
 
 <a name="english"></a>
+## 🇺🇸 English
 ### About LearnKana
 
         LearnKana is a simple and effective app for mastering Hiragana and Katakana, the two basic Japanese scripts.  
@@ -87,6 +90,7 @@
 ---
 
 <a name="japanese"></a>
+## 🇯🇵 日本語
 ### LearnKanaについて
 
         LearnKanaは、ひらがなとカタカナの二つの基本的な日本語の文字を習得するための、  
